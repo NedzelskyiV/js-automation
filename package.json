@@ -21,6 +21,7 @@
     "axios": "^0.21.1",
     "chai": "^4.3.4",
     "deep-equal-in-any-order": "^1.1.4",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "mocha-allure-reporter": "^1.4.0"
   }
 }
