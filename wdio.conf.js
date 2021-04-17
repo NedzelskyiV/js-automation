@@ -34,6 +34,14 @@ exports.config = {
     specs: [
         './src/test/api/**/*.js'
     ],
+    suites: {
+        api: [
+            './src/test/api/**/*.js'
+        ],
+        ui: [
+            './src/test/ui/**/*.js'
+        ]
+    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -67,7 +75,7 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'chrome',
+        browserName: 'firefox',
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -105,7 +113,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://rozetka.com.ua/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -215,8 +223,9 @@ exports.config = {
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
      */
-    // beforeSuite: function (suite) {
-    // },
+    beforeSuite: function (suite) {
+        browser.maximizeWindow();
+    },
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */

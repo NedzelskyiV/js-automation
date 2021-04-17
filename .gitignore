@@ -1,0 +1,4 @@
+node_modules
+allure-*
+coverage
+package-lock.json

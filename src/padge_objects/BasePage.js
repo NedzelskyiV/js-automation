@@ -1,13 +1,12 @@
-/**
-* main page object containing all methods, selectors and functionality
-* that is shared across all page objects
-*/
+const { default: AllureReporter } = require('@wdio/allure-reporter');
+const conf = require('../../wdio.conf');
+
 module.exports = class BasePage {
-    /**
-    * Opens a sub page of the page
-    * @param path path of the sub page (e.g. /path/to/page.html)
-    */
-    open (path) {
-        return browser.url(`https://the-internet.herokuapp.com/${path}`)
+
+    openHamePage() {
+        AllureReporter.startStep("Open main page");
+        browser.url(conf.config.baseUrl);
+        AllureReporter.endStep('passed');
     }
+    
 }
