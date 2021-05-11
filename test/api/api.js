@@ -1,10 +1,10 @@
-const getHelper = require('../../api/controllers/get_controller.js');
-const postHelper = require('../../api/controllers/post_controller.js');
+const getHelper = require('../../src/api/controllers/get_controller.js');
+const postHelper = require('../../src/api/controllers/post_controller.js');
 
 
 const deepEqualInAnyOrder = require('deep-equal-in-any-order');
 const chai = require('chai');
-const put_controller = require('../../api/controllers/put_controller.js');
+const put_controller = require('../../src/api/controllers/put_controller.js');
 const { default: axios } = require('axios');
 
 chai.use(deepEqualInAnyOrder);

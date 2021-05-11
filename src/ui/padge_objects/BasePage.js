@@ -1,5 +1,5 @@
 const { default: AllureReporter } = require('@wdio/allure-reporter');
-const conf = require('../../wdio.conf');
+const conf = require('../../../wdio.conf');
 
 module.exports = class BasePage {
 

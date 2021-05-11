@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "js-automation",
   "scripts": {
-    "test": ""
+    "api": "mocha test/api/**.js",
+    "ui": "mocha test/ui/**.js"
+
   },
   "author": "Vitalii Nedzelskyi",
   "license": "ISC",

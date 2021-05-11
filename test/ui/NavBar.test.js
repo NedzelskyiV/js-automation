@@ -1,10 +1,15 @@
-const NavBar = require('../../padge_objects/navigation_bar/NavBar');
-const homePage = require('../../padge_objects/HomePage');
-const LoginModal = require('../../padge_objects/navigation_bar/LoginModal');
+const NavBar = require('../../src/ui/padge_objects/navigation_bar/NavBar');
+const homePage = require('../../src/ui/padge_objects/HomePage');
+const LoginModal = require('../../src/ui/padge_objects/navigation_bar/LoginModal');
 const AllureReporter = require('@wdio/allure-reporter').default;
-const shopingCard = require('../../padge_objects/navigation_bar/ShopingCard');
+const shopingCard = require('../../src/ui/padge_objects/navigation_bar/ShopingCard');
 
 describe('Navigation Bar', () => {
+
+    beforeEach(function() {
+        browser.get('http://www.yahoo.com');
+      });
+
     it('Validate Language could be selected', () => {
         NavBar.openHamePage();
 
